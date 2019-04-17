@@ -1,0 +1,140 @@
+.button1{
+  position: absolute;
+  background-color: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border: none;
+  color: purple;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: -15px 530px;
+  cursor: pointer;
+}
+
+.button1:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.button2:active{
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+.button2{
+  background-color: white;
+  -webkit-border-radius: 20px;  
+  -moz-border-radius: 20px;
+  border: none;
+  color: purple;
+  padding: 15px 32px;
+  font-size: 16px;
+  margin: -15px 679px;
+  cursor: pointer;
+}
+
+.methods{
+   position: absolute;
+   margin-top: -90px;
+   margin-left: 627px;
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: purple;
+   background-color: white;
+}
+
+.textarea1{
+    margin-top: 5px;
+    margin-left: 456px;
+    border:1px solid white;
+    box-shadow: 0 0 15px #911511;
+    resize: none;
+    height: 200px;
+    width:30%
+}
+
+.textarea2{
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 225px;
+    border:1px solid white;
+    box-shadow: 0 0 15px #911511;
+    resize: none;
+    height: 200px;
+    width:30%
+}
+
+.textarea3{
+    position: relative;
+    margin-left: 697px;
+    border:1px solid white;
+    box-shadow: 0 0 15px #911511;
+    resize: none;
+    height: 200px;
+    width:30%
+}
+
+.ciphertext{
+    position: absolute;
+    padding-left :395px;
+    padding-top: 1px;
+    color: white;
+    text-align: center;
+}
+
+.decodedtext{
+    position: absolute;
+    padding-left :850px;
+    padding-top: 2px;
+    color: white;
+}
+
+.plaintext{
+    position: absolute;
+    margin-top: -35px;
+    padding-left: 615px;
+    color: white;
+    text-align: center;
+}
+
+.shift_select{
+   position: absolute;
+   margin-top: 130px;
+   margin-left: 525px;
+   background: transparent;
+   -webkit-border-radius: 20px;  
+   -moz-border-radius: 20px;
+   border: none;
+   font-size: 14px;
+   height: 27px;
+   padding: 5px; 
+   width: 268px;
+   background-color: white;
+   color: purple;
+   text-align: center;
+   display: inline-block;
+   text-align: center;
+}
+
+.text1{
+    color: white;
+    text-align: center;
+    padding-top: -20px;
+}
+    
+.shift{
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+body {
+    background-image: url("https://image.freepik.com/free-vector/technology-background-with-gradient-colors_23-2147837710.jpg");
+    max-height: 100%;
+    max-width: 100%;
+    background-size: 100%;
+}
+
+
+

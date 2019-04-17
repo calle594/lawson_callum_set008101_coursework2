@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ciphers</title>
+</head>
+<body>
+    <br>
+    <div class="plaintext"><p><strong>Plaintext</strong></p></div>
+    
+    <textarea id="plain_text" name="text" class="textarea1"></textarea>
+    
+      <div id="wrapper"><select class="shift_select" select id="key" name="key" size="1">
+      <option value="0">0</option> 
+      <option value="1">1</option> 
+      <option value="2">2</option> 
+      <option value="3">3</option> 
+      <option value="4">4</option> 
+      <option value="5" selected="selected">5</option> 
+      <option value="6">6</option> 
+      <option value="7">7</option> 
+      <option value="8">8</option> 
+      <option value="9">9</option> 
+      <option value="10">10</option> 
+      <option value="11">11</option> 
+      <option value="12">12</option> 
+      <option value="13">13</option> 
+      <option value="14">14</option> 
+      <option value="15">15</option> 
+      <option value="16">16</option> 
+      <option value="17">17</option> 
+      <option value="18">18</option> 
+      <option value="19">19</option> 
+      <option value="20">20</option> 
+      <option value="21">21</option> 
+      <option value="22">22</option> 
+      <option value="23">23</option> 
+      <option value="24">24</option> 
+      <option value="25">25</option> 
+      </select>
+
+    
+    <br>
+    <br>
+        
+    <strong><p class="text1">Select your cipher or encoding method </p></strong>
+    <p class="shift "><strong>Shift</strong></p>
+    <br>
+    <br>
+    <select name="methods" id="methods" class="methods">
+
+    <option value="caesar">Caesar</option>
+    <option value="base-64">Base-64</option>
+    <option value="morse">Morse</option>
+    
+        
+    </select>
+    <br>
+    <br>
+    <input type="button" class="button1" value="Encrypt" onClick=encryption();base_64();morse()>
+    
+    <input type="button" class="button2" value="Decrypt" onClick=decryption();dec_base_64();decodemorse()>
+    
+    <div class="ciphertext"><p><strong>Ciphertext</strong></p></div>
+    <div class="decodedtext"><p><strong>Decoded Text</strong></p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <textarea name="text" id="text_encoded" class="textarea2"></textarea>
+    <textarea name="text" id="text_decoded" class="textarea3"></textarea> 
+
+    <script type="text/javascript" src="./js/Ciphers.js"></script>
+    <link rel="stylesheet" href="./css/Ciphers.css">
+    </div>
+</body>
+</html>
+
