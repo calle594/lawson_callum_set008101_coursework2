@@ -7,7 +7,6 @@ var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 
 //connect to MongoDB
-
 mongoose.connect('mongodb://localhost/testForAuth');
 var db = mongoose.connection;
 
@@ -60,6 +59,10 @@ app.use(function (err, req, res, next) {
   res.send(err.message);
 });
 
+app.use(function(req,res,next){
+  res.locals.currentUser=req.user
+  next()
+})
 
 // listen on port 5000
 app.listen(5000, function () {
