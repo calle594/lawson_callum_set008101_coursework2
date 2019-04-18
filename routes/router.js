@@ -4,12 +4,14 @@ var User = require('../models/user');
 var ejs = require('ejs');
 var Email = require("../models/Email"); //Export schema
 var nodemailer = require('nodemailer'); // Send email
-
+var bodyParser = require('body-parser');
 // GET route for reading data
 router.get('/', function (req, res, next) {
-  return res.sendFile(path.join(__dirname + '/templateLogReg/index.html'));
+  return res.sendFile(path.join(__dirname + '/views/index.html'));
 });
 
+router.use(bodyParser.urlencoded({extended: false}));
+router.use(bodyParser.json());
 
 //POST route for updating data
 router.post('/', function (req, res, next) {
@@ -19,7 +21,8 @@ router.post('/', function (req, res, next) {
     err.status = 400;
     res.send("passwords dont match");
     return next(err);
-  }
+  } 
+
 
   if (req.body.email &&
     req.body.username &&
@@ -31,7 +34,7 @@ router.post('/', function (req, res, next) {
       username: req.body.username,
       password: req.body.password,
     }
-
+    
     User.create(userData, function (error, user) {
       if (error) {
         return next(error);
@@ -50,7 +53,7 @@ router.post('/', function (req, res, next) {
       } else {
         req.session.userId = user._id;
         return res.redirect('/profile');
-      }
+      } 
     });
   } else {
     var err = new Error('All fields required.');
@@ -71,13 +74,13 @@ router.get('/profile', function (req, res, next) {
           err.status = 400;
           return next(err);
         } else {
-           return res.render('profile.html');
+           return res.render('profile.ejs', {"name":user.username,"email":user.email});
         }
       }
     });
 });
 
-// GET for logout logout
+// GET for logout 
 router.get('/logout', function (req, res, next) {
   if (req.session) {
     // delete session object
