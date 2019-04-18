@@ -1,14 +1,16 @@
 .button1{
-  position: absolute;
   background-color: white;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border: none;
-  color: purple;
+  color:  #000000;
   padding: 15px 32px;
   font-size: 16px;
-  margin: -15px 530px;
-  cursor: pointer;
+  position: relative;
+  margin-left: 40%;
+  margin-right: auto;
+  margin-top: -4%
+  
 }
 
 .button1:active{
@@ -26,32 +28,38 @@
   -webkit-border-radius: 20px;  
   -moz-border-radius: 20px;
   border: none;
-  color: purple;
+  color: #000000;
   padding: 15px 32px;
   font-size: 16px;
-  margin: -15px 679px;
-  cursor: pointer;
+  margin-left: auto;
+  margin-right: 30%;
+  margin-top: -3em;
 }
 
 .methods{
-   position: absolute;
-   margin-top: -90px;
-   margin-left: 627px;
    -webkit-border-radius: 20px;
    -moz-border-radius: 20px;
    border-radius: 20px;
-   color: purple;
+   color: #000000;
    background-color: white;
+    position: absolute;
+    margin-left: 46.7%;
+    margin-right: 50%;
+    margin-top: -8em;
 }
 
 .textarea1{
-    margin-top: 5px;
-    margin-left: 456px;
+     display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15em;
     border:1px solid white;
-    box-shadow: 0 0 15px #911511;
+    box-shadow: 0 0 15px #000000;
     resize: none;
     height: 200px;
-    width:30%
+    width:25%
+   
+    
 }
 
 .textarea2{
@@ -59,25 +67,26 @@
     margin-bottom: 10px;
     margin-left: 225px;
     border:1px solid white;
-    box-shadow: 0 0 15px #911511;
+    box-shadow: 0 0 15px #000000;
     resize: none;
     height: 200px;
-    width:30%
+    width:25%
+    
 }
 
 .textarea3{
     position: relative;
     margin-left: 697px;
     border:1px solid white;
-    box-shadow: 0 0 15px #911511;
+    box-shadow: 0 0 15px #000000;
     resize: none;
     height: 200px;
-    width:30%
+    width:25%
 }
 
 .ciphertext{
     position: absolute;
-    padding-left :395px;
+    padding-left :22em;
     padding-top: 1px;
     color: white;
     text-align: center;
@@ -85,42 +94,34 @@
 
 .decodedtext{
     position: absolute;
-    padding-left :850px;
+    padding-left :52em;
     padding-top: 2px;
     color: white;
 }
 
 .plaintext{
-    position: absolute;
-    margin-top: -35px;
-    padding-left: 615px;
-    color: white;
     text-align: center;
+    color: white;
 }
 
 .shift_select{
-   position: absolute;
-   margin-top: 130px;
-   margin-left: 525px;
-   background: transparent;
    -webkit-border-radius: 20px;  
    -moz-border-radius: 20px;
    border: none;
-   font-size: 14px;
-   height: 27px;
    padding: 5px; 
    width: 268px;
    background-color: white;
-   color: purple;
-   text-align: center;
-   display: inline-block;
-   text-align: center;
+   color:  #000000;
+    position: absolute;
+    margin-left: 39.7%;
+    margin-right: 50%;
+    margin-top: 7em;
 }
 
 .text1{
+  text-align: center;
     color: white;
-    text-align: center;
-    padding-top: -20px;
+    
 }
     
 .shift{
@@ -130,11 +131,29 @@
 }
 
 body {
-    background-image: url("https://image.freepik.com/free-vector/technology-background-with-gradient-colors_23-2147837710.jpg");
-    max-height: 100%;
-    max-width: 100%;
-    background-size: 100%;
+    font-family: 'Jura', sans-serif;
+    background:#94c7f7;
 }
 
+.everything{
+   margin-top: -12em;
+}
 
+.profile_page{
+    float:left;
+    margin-top: -33em;
+}
 
+.profile_page{
+  background-color: white;
+  color: black;
+  padding: 1em 1.5em;
+}
+
+.profile_page:visited {
+  background-color: red;
+}
+
+.profile_page:active {
+  background-color: red;
+}

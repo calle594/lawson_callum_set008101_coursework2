@@ -7,10 +7,10 @@
 <body>
     <br>
     <div class="plaintext"><p><strong>Plaintext</strong></p></div>
-    
+    <div class="everything">
     <textarea id="plain_text" name="text" class="textarea1"></textarea>
+      <select class="shift_select" select id="key" name="key" size="1">
     
-      <div id="wrapper"><select class="shift_select" select id="key" name="key" size="1">
       <option value="0">0</option> 
       <option value="1">1</option> 
       <option value="2">2</option> 
@@ -37,12 +37,7 @@
       <option value="23">23</option> 
       <option value="24">24</option> 
       <option value="25">25</option> 
-      </select>
-
-    
-    <br>
-    <br>
-        
+      </select>  
     <strong><p class="text1">Select your cipher or encoding method </p></strong>
     <p class="shift "><strong>Shift</strong></p>
     <br>
@@ -57,10 +52,11 @@
     </select>
     <br>
     <br>
+    <div id="wrapper"></div>
     <input type="button" class="button1" value="Encrypt" onClick=encryption();base_64();morse()>
     
     <input type="button" class="button2" value="Decrypt" onClick=decryption();dec_base_64();decodemorse()>
-    
+    </div>
     <div class="ciphertext"><p><strong>Ciphertext</strong></p></div>
     <div class="decodedtext"><p><strong>Decoded Text</strong></p>
     </div>
@@ -72,7 +68,7 @@
 
     <script type="text/javascript" src="./js/Ciphers.js"></script>
     <link rel="stylesheet" href="./css/Ciphers.css">
-    </div>
+    <div class="profile_page"><span></span><a href="/profile">Profile Page</a></div>
 </body>
 </html>
 
