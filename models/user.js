@@ -2,22 +2,37 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var Schema = mongoose.Schema;
 
+
+
+//Schema to store user registration details
 var UserSchema = new mongoose.Schema({
   email: {
     type: String,
     unique: true,
-    required: true,
-    trim: true
+    required: 'Email address is required',
+    trim: true,
   },
   username: {
     type: String,
     unique: true,
     required: true,
     trim: true
+      
   },
   password: {
     type: String,
     required: true,
+    minLength: 8,
+    maxLength: 32
+  }
+});
+
+
+UserSchema.post('save', function(error, doc, next) {
+  if (error.name === 'MongoError' && error.code === 11000) {
+    next(new Error('Username/Email already exists'));
+  } else {
+    next(error);
   }
 });
 
