@@ -1,6 +1,11 @@
 Instructions for running
 
 - My files were contained in a folder called "Coursework--2" which was a sub-folder of the node.js directory.
-- You can run the CD'ing into the "Coursework--2" directory and type "node app.js" to run it.
+- The server is ran from "app.js"
+- You can run it by CD'ing into the directory where "app.js" is contained and type "node app.js" to run it.
 - You may need "npm install" to install the dependencies.
 - You should see "Express app listening on port 5000"
+- You can navigate to "http://localhost:5000/" to start using the program. 
+- For testing the e-mail i was using an outlook account, you can change the host in "router.js" to send it to a different host e.g Gmail.
+- to change which user is sending an e-mail to you can change the user "YOUREMAIL" and password "YOURPASSWORD" fields with valid info. 
+- Finally to change which user to send an email to you can change the "from" and "to" fields under mailOptions.
