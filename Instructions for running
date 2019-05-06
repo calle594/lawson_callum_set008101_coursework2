@@ -2,6 +2,7 @@ Instructions for running
 
 - My files were contained in a folder called "Coursework--2" which was a sub-folder of the node.js directory.
 - The server is ran from "app.js"
+- The databse is MongoDB Compass
 - You can run it by CD'ing into the directory where "app.js" is contained and type "node app.js" to run it.
 - You may need "npm install" to install the dependencies.
 - You should see "Express app listening on port 5000"
