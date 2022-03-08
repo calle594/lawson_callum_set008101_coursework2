@@ -4,17 +4,18 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var MongoStore = require('connect-mongo');
+const MongoStore = require('connect-mongo')
+
 
 //connect to MongoDB
 mongoose.connect('mongodb://localhost/testForAuth', { useNewUrlParser: true});
-var db = mongoose.connection;
+//var db = mongoose.connection;
 
-//handle mongo error
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
-  // we're connected!
-});
+// //handle mongo error
+// db.on('error', console.error.bind(console, 'connection error:'));
+// db.once('open', function () {
+//   // we're connected!
+// });
 
 //use sessions for tracking logins
 app.use(session({
@@ -22,7 +23,7 @@ app.use(session({
   resave: true,
   saveUninitialized: false,
   store: MongoStore.create({
-    mongoUrl: db
+    mongoUrl: 'mongodb+srv://calle594:SLobberknocker1@cluster0.k9i23.mongodb.net/test'
   })
 }));
 
