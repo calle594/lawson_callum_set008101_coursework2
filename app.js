@@ -4,10 +4,10 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var mongoose = require('mongoose');
 var session = require('express-session');
-var MongoStore = require('connect-mongo')(session);
+var MongoStore = require('connect-mongo');
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost/testForAuth');
+mongoose.connect('mongodb://localhost/testForAuth', { useNewUrlParser: true});
 var db = mongoose.connection;
 
 //handle mongo error
@@ -21,8 +21,8 @@ app.use(session({
   secret: 'work hard',
   resave: true,
   saveUninitialized: false,
-  store: new MongoStore({
-    mongooseConnection: db
+  store: MongoStore.create({
+    mongoUrl: db
   })
 }));
 
@@ -33,7 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'views')));
 
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');	
+app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 // serve static files from template
@@ -59,8 +59,8 @@ app.use(function (err, req, res, next) {
   res.send(err.message);
 });
 
-app.use(function(req,res,next){
-  res.locals.currentUser=req.user
+app.use(function (req, res, next) {
+  res.locals.currentUser = req.user
   next()
 })
 
