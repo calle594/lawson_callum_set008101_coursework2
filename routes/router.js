@@ -127,8 +127,8 @@ const output = `
     port: 587,
     secure: false, 
     auth: {
-        user: 'YOUREMAIL', // Test User - fill with your details
-        pass: 'YOURPASSWORD'  // Test Password - fill with your details
+        user: 'calle594', // Test User - fill with your details
+        pass: 'SLobberknocker1'  // Test Password - fill with your details
     },
     tls:{
       rejectUnauthorized:false
@@ -137,8 +137,8 @@ const output = `
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Nodemailer Contact" <call232e590@hotmail.com>', // sender address
-      to: 'TESTEMAIL', // define who to send the email too
+      from: '"Nodemailer Contact" <calle590@hotmail.com>', // sender address
+      to: 'Callum Lawson', // define who to send the email too
       subject: 'Node Contact Request', // Subject line
       text: 'Hello world?', // plain text body
       html: output // html body

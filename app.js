@@ -8,7 +8,7 @@ const MongoStore = require('connect-mongo')
 
 
 //connect to MongoDB
-mongoose.connect('mongodb://localhost/testForAuth', { useNewUrlParser: true});
+mongoose.connect('mongodb+srv://calle594:SLobberknocker1@cluster0.k9i23.mongodb.net/test', { useNewUrlParser: true});
 //var db = mongoose.connection;
 
 // //handle mongo error
